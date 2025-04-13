@@ -1,47 +1,344 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f5;
+/* Variables */
+:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #794afa;
+    --dark-color: #1e1e1e;
+    --light-color: #f8f9fa;
+    --gray-color: #6c757d;
+    --success-color: #28a745;
+}
+
+/* Reset y estilos base */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-color);
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header */
 header {
-    background-color: #1e1e2f;
+    background-color: var(--dark-color);
     color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-main {
+    padding: 1rem 2rem;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 30px;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.anime-card {
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.logo h1 span {
+    color: var(--primary-color);
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul li a {
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 1rem;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #ff5252;
+    transform: translateY(-2px);
+}
+
+/* Reproductor */
+.player-section {
+    background-color: white;
+    padding: 2rem;
+    margin: -50px auto 0;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.player-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.player-info img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.song-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.song-info p {
+    color: var(--gray-color);
+    font-size: 0.9rem;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+
+.player-controls button {
+    background: none;
+    color: var(--dark-color);
+    font-size: 1.5rem;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-controls button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.progress-container span {
+    font-size: 0.8rem;
+    color: var(--gray-color);
+}
+
+#progress-bar {
+    flex-grow: 1;
+    height: 5px;
+    cursor: pointer;
+}
+
+/* Secciones */
+.section-title {
+    text-align: center;
+    margin: 4rem 0 2rem;
+    font-size: 2rem;
+    color: var(--dark-color);
+}
+
+/* Grids */
+.generos-grid, .artistas-grid, .playlists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+    margin-bottom: 4rem;
+}
+
+/* Tarjetas */
+.genre-card, .artist-card, .playlist-card {
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    width: 300px;
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.3s;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
 }
 
-.anime-card:hover {
-    transform: scale(1.05);
+.genre-card:hover, .artist-card:hover, .playlist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.anime-card img {
+.genre-card img, .artist-card img, .playlist-card img {
     width: 100%;
-    border-radius: 10px;
+    height: 150px;
+    object-fit: cover;
 }
 
+.genre-card .card-content, .artist-card .card-content, .playlist-card .card-content {
+    padding: 1rem;
+}
+
+.genre-card h3, .artist-card h3, .playlist-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.genre-card p, .artist-card p, .playlist-card p {
+    color: var(--gray-color);
+    font-size: 0.9rem;
+}
+
+/* Footer */
 footer {
-    background-color: #1e1e2f;
+    background-color: var(--dark-color);
     color: white;
+    padding: 3rem 0 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-section.about p {
+    margin-bottom: 1rem;
+}
+
+.footer-section.links ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-section.links ul li a:hover {
+    color: var(--primary-color);
+}
+
+.footer-section.contact p {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.socials a {
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
     text-align: center;
-    padding: 15px 0;
+    padding: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .player-section {
+        margin: -30px 1rem 0;
+    }
+
+    .player-info {
+        flex-direction: column;
+        text-align: center;
+    }
 }

@@ -3,37 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Animes Favoritos</title>
+    <title>Música Variada - Todos los Géneros</title>
     <link rel="stylesheet" href="estilo1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Mis Animes Favoritos</h1>
-        <p>Un espacio para compartir mis animes preferidos 🎌</p>
+        <div class="logo">
+            <h1>Música<span>Variada</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#generos">Géneros</a></li>
+                <li><a href="#artistas">Artistas</a></li>
+                <li><a href="#playlists">Playlists</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section class="anime-card">
-            <img src="https://upload.wikimedia.org/wikipedia/en/5/5f/Attack_on_Titan_cover.jpg" alt="Attack on Titan">
-            <h2>Attack on Titan</h2>
-            <p>Una historia épica de supervivencia contra titanes gigantes.</p>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h2>Descubre música para todos los momentos</h2>
+                <p>Explora miles de canciones de diferentes géneros y épocas.</p>
+                <button id="explorarBtn">Explorar ahora</button>
+            </div>
         </section>
 
-        <section class="anime-card">
-            <img src="https://upload.wikimedia.org/wikipedia/en/c/c6/Demon_Slayer_Kimetsu_no_Yaiba_volume_1_cover.jpg" alt="Demon Slayer">
-            <h2>Demon Slayer</h2>
-            <p>Tanjiro lucha contra demonios para salvar a su hermana Nezuko.</p>
+        <section id="reproductor" class="player-section">
+            <div class="player-container">
+                <div class="player-info">
+                    <img id="portada" src="https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228" alt="Portada del álbum">
+                    <div class="song-info">
+                        <h3 id="titulo-cancion">Canción de ejemplo</h3>
+                        <p id="artista">Artista desconocido</p>
+                    </div>
+                </div>
+                <div class="player-controls">
+                    <button id="anterior"><i class="fas fa-step-backward"></i></button>
+                    <button id="play-pause"><i class="fas fa-play"></i></button>
+                    <button id="siguiente"><i class="fas fa-step-forward"></i></button>
+                </div>
+                <div class="progress-container">
+                    <span id="tiempo-actual">0:00</span>
+                    <input type="range" id="progress-bar" value="0">
+                    <span id="duracion-total">3:30</span>
+                </div>
+                <audio id="audio-player"></audio>
+            </div>
         </section>
 
-        <section class="anime-card">
-            <img src="https://upload.wikimedia.org/wikipedia/en/7/72/NarutoCoverTankobon1.jpg" alt="Naruto">
-            <h2>Naruto</h2>
-            <p>La historia de un joven ninja con el sueño de convertirse en Hokage.</p>
+        <section id="generos" class="generos-section">
+            <h2 class="section-title">Explora por Géneros</h2>
+            <div class="generos-grid" id="generos-container">
+                <!-- Generos se cargarán dinámicamente con JS -->
+            </div>
+        </section>
+
+        <section id="artistas" class="artistas-section">
+            <h2 class="section-title">Artistas Destacados</h2>
+            <div class="artistas-grid" id="artistas-container">
+                <!-- Artistas se cargarán dinámicamente con JS -->
+            </div>
+        </section>
+
+        <section id="playlists" class="playlists-section">
+            <h2 class="section-title">Playlists Populares</h2>
+            <div class="playlists-grid" id="playlists-container">
+                <!-- Playlists se cargarán dinámicamente con JS -->
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>Creado por [Tu Nombre] - 2025</p>
+    <footer id="contacto">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Sobre Nosotros</h3>
+                <p>Música Variada es tu plataforma para descubrir nuevos sonidos y disfrutar de tus favoritos.</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#generos">Géneros</a></li>
+                    <li><a href="#artistas">Artistas</a></li>
+                    <li><a href="#playlists">Playlists</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-envelope"></i> contacto@musicavariada.com</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Música Variada. Todos los derechos reservados.</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

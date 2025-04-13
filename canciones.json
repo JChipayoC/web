@@ -1,0 +1,118 @@
+{
+    "songs": [
+        {
+            "title": "Bohemian Rhapsody",
+            "artist": "Queen",
+            "cover": "https://i.scdn.co/image/ab67616d00001e02ff9ca10b55ce82ae553c8228",
+            "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+            "duration": 354,
+            "genre": "Rock"
+        },
+        {
+            "title": "Blinding Lights",
+            "artist": "The Weeknd",
+            "cover": "https://i.scdn.co/image/ab67616d00001e02a935e34af9ffc703db9b9e2f",
+            "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+            "duration": 203,
+            "genre": "Pop"
+        },
+        {
+            "title": "Smooth Criminal",
+            "artist": "Michael Jackson",
+            "cover": "https://i.scdn.co/image/ab67616d00001e0268e3a5c389b2b50a6f1a0c4b",
+            "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+            "duration": 258,
+            "genre": "Pop"
+        }
+    ],
+    "genres": [
+        {
+            "name": "Rock",
+            "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "songs": 1560
+        },
+        {
+            "name": "Pop",
+            "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "songs": 2345
+        },
+        {
+            "name": "Hip Hop",
+            "image": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "songs": 1890
+        },
+        {
+            "name": "Electrónica",
+            "image": "https://images.unsplash.com/photo-1496293455970-f8581aae0e3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "songs": 1200
+        },
+        {
+            "name": "Jazz",
+            "image": "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "songs": 850
+        },
+        {
+            "name": "Clásica",
+            "image": "https://images.unsplash.com/photo-1458560871784-56d23406c091?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "songs": 760
+        }
+    ],
+    "artists": [
+        {
+            "name": "Queen",
+            "image": "https://i.scdn.co/image/ab6761610000e5eb0ad8fa6f1d259f5c2a5c0a15",
+            "genre": "Rock"
+        },
+        {
+            "name": "The Weeknd",
+            "image": "https://i.scdn.co/image/ab6761610000e5ebc36dd9eb55cd0e391a57a46b",
+            "genre": "Pop"
+        },
+        {
+            "name": "Michael Jackson",
+            "image": "https://i.scdn.co/image/ab6761610000e5eb8ae7f2aaa9817a704a87ea36",
+            "genre": "Pop"
+        },
+        {
+            "name": "Beyoncé",
+            "image": "https://i.scdn.co/image/ab6761610000e5eb99e4fca7c0b7cb166d915789",
+            "genre": "R&B"
+        },
+        {
+            "name": "Kendrick Lamar",
+            "image": "https://i.scdn.co/image/ab6761610000e5eb437b9e2a82505b3d93ff1022",
+            "genre": "Hip Hop"
+        },
+        {
+            "name": "Daft Punk",
+            "image": "https://i.scdn.co/image/ab6761610000e5eb0a7388b95df960b5c0da8970",
+            "genre": "Electrónica"
+        }
+    ],
+    "playlists": [
+        {
+            "name": "Éxitos del Verano 2023",
+            "image": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "songs": 50,
+            "creator": "Música Variada"
+        },
+        {
+            "name": "Rock Clásico",
+            "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "songs": 35,
+            "creator": "Música Variada"
+        },
+        {
+            "name": "Relax & Study",
+            "image": "https://images.unsplash.com/photo-1458560871784-56d23406c091?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "songs": 40,
+            "creator": "Música Variada"
+        },
+        {
+            "name": "Energía para el Gym",
+            "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+            "songs": 30,
+            "creator": "Música Variada"
+        }
+    ]
+}
