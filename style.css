@@ -49,19 +49,20 @@ nav ul li a:hover {
 
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/banner.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(105, 105, 105, 1)), url('images/banner.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 80px;
+    padding-top: 150px;
 }
 
 .hero-content h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
+    background-image: ;
 }
 
 .hero-content p {
@@ -85,13 +86,41 @@ nav ul li a:hover {
 }
 
 section {
-    padding: 5rem 2rem;
+    padding: 5rem 20rem;
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 2rem;
     text-align: center;
+}
+
+
+.bio-content {
+    max-width: 10px; /* o el ancho que desees */
+    margin: 50px auto; /* margen superior/inferior de 50px, centrado horizontal */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.band-info {
+    font-size: 1.2rem;
+    padding: 30px;
+    box-shadow: 0 15px 15px 15px rgba(100,100,100,100);
+}
+p {
+    margin-bottom: 25px;
+    text-align: center;
+}
+.highlight {
+    font-weight: bold;
+    color: #d32f2f;
+}
+.album-title {
+    font-style: italic;
+    color: #555;
 }
 
 /* Estilos para la sección de música */
@@ -299,12 +328,6 @@ h2 {
 
 .gallery-item img:hover {
     transform: scale(1.03);
-}
-
-.bio-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
 }
 
 .contact-section {
