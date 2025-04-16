@@ -1,0 +1,403 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #1db954;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #1db954;
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #1ed760;
+}
+
+section {
+    padding: 5rem 2rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Estilos para la sección de música */
+.music-section {
+    background-color: #181818;
+}
+
+.albums-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.album-card {
+    background-color: #282828;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 200px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.album-card:hover {
+    transform: scale(1.05);
+}
+
+.album-card img {
+    width: 100%;
+    height: auto;
+}
+
+.album-info {
+    padding: 1rem;
+}
+
+.album-info h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.album-info p {
+    font-size: 0.8rem;
+    color: #b3b3b3;
+}
+
+.player-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #282828;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.player {
+    display: flex;
+    padding: 2rem;
+}
+
+.album-cover {
+    width: 150px;
+    height: 150px;
+    margin-right: 2rem;
+}
+
+.album-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.player-info {
+    flex: 1;
+}
+
+.progress-container {
+    margin: 1.5rem 0;
+    background-color: #535353;
+    height: 6px;
+    border-radius: 3px;
+    position: relative;
+}
+
+.progress-bar {
+    background-color: #1db954;
+    height: 100%;
+    width: 0%;
+    border-radius: 3px;
+}
+
+.progress-container span {
+    position: absolute;
+    font-size: 0.8rem;
+    color: #b3b3b3;
+}
+
+#current-time {
+    left: 0;
+    bottom: -20px;
+}
+
+#duration {
+    right: 0;
+    bottom: -20px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.controls button:hover {
+    color: #1db954;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 0.5rem;
+}
+
+.volume-control i {
+    font-size: 1.2rem;
+}
+
+.playlist {
+    background-color: #181818;
+    padding: 1rem;
+}
+
+.playlist-item {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #282828;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.playlist-item:hover {
+    background-color: #282828;
+}
+
+.playlist-item.active {
+    background-color: #383838;
+}
+
+.playlist-item-number {
+    width: 30px;
+    color: #b3b3b3;
+}
+
+.playlist-item-title {
+    flex: 1;
+}
+
+.playlist-item-duration {
+    color: #b3b3b3;
+}
+
+/* Estilos para otras secciones */
+.tour-dates {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tour-date {
+    background-color: #282828;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.03);
+}
+
+.bio-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-section {
+    background-color: #181818;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #282828;
+    color: #ffffff;
+}
+
+#contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #1db954;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #000000;
+    color: #b3b3b3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    nav ul {
+        margin-top: 1rem;
+    }
+    
+    nav ul li {
+        margin-left: 1rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .player {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .album-cover {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+    
+    .controls {
+        justify-content: center;
+    }
+    
+    .volume-control {
+        margin-left: 0;
+    }
+    
+    .tour-date {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
