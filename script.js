@@ -115,18 +115,24 @@ function loadBandData() {
     });
 
     // Cargar fechas de tour
-    bandData.tourDates.forEach(date => {
-        const dateElement = document.createElement('div');
-        dateElement.className = 'tour-date';
-        dateElement.innerHTML = `
-            <div>
-                <h3>${date.date}</h3>
-                <p>${date.venue}</p>
-            </div>
+    bandData.tourDates.forEach((date, index) => {
+    const dateElement = document.createElement('div');
+    dateElement.className = 'tour-date';
+
+    const imageNumber = index + 1;
+    const imageSrc = `images/con${imageNumber}.png`;
+
+    dateElement.innerHTML = `
+        <img src="${imageSrc}" alt="Concierto ${imageNumber}" class="tour-img" />
+        <div>
+            <h3>${date.date}</h3>
+            <p>${date.venue}</p>
+        </div>
             <p>${date.location}</p>
-        `;
-        tourDatesContainer.appendChild(dateElement);
-    });
+    `;
+
+    tourDatesContainer.appendChild(dateElement);
+});
 
     // Cargar el primer álbum por defecto
     if (bandData.albums.length > 0) {

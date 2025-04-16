@@ -311,6 +311,13 @@ p {
     align-items: center;
 }
 
+.tour-img {
+    width: 300px;  /* Puedes cambiar este valor a lo que necesites */
+    height: auto;  /* Esto mantiene la proporción de la imagen */
+    border-radius: 8px; /* Opcional: esquinas redondeadas */
+    margin-bottom: 10px;
+}
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
