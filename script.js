@@ -68,11 +68,11 @@ const bandData = {
         }
     ],
     tourDates: [
-        { date: "15 Oct 2023", venue: "Movistar Arena", location: "Bogotá, Colombia" },
-        { date: "22 Oct 2023", venue: "Estadio Atanasio Girardot", location: "Medellín, Colombia" },
-        { date: "5 Nov 2023", venue: "Arena México", location: "Ciudad de México, México" },
-        { date: "12 Nov 2023", venue: "Estadio Nacional", location: "Lima, Perú" },
-        { date: "19 Nov 2023", venue: "Movistar Arena", location: "Santiago, Chile" }
+        { date: "Sábado, 3 May 2025", venue: "Teatro Santande", location: "Bucaramanga, Colombia" },
+        { date: "Jueves, 8 May 2025", venue: "laNau", location: "Barcelona, España" },
+        { date: "Sábado, 10 May 2025", venue: "Sala Villanos", location: "Madrid, España" },
+        { date: "Viernes, 23 May 2025", venue: "Foro Tims", location: "Monterrey, México" },
+        { date: "Sábado, 24 May 2025", venue: "Foro La Paz", location: "Ciudad de México, México" }
     ]
 };
 
